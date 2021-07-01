@@ -1,0 +1,29 @@
+{
+  "name": "unrollr",
+  "version": "0.1.0",
+  "description": "A minimal, vanilla JS package for unrolling nested blockquotes from sites like tumblr",
+  "main": "src/index.js",
+  "scripts": {
+    "gitbadge": "PROBLEMS=$(npm run gitlint | sed -n '/problem/p' | cut -d' ' -f2,3); [ -z \"$PROBLEMS\" ] && echo \"{ \\\"schemaVersion\\\": 1, \\\"label\\\": \\\"ESLint\\\", \\\"message\\\": \\\"0 problems\\\", \\\"color\\\": \\\"success\\\" }\" > .github/ESLint.shield.json || echo \"{ \\\"schemaVersion\\\": 1, \\\"label\\\": \\\"ESLint\\\", \\\"message\\\": \\\"\"$PROBLEMS\"\\\", \\\"color\\\": \\\"critical\\\" }\" > .github/ESLint.shield.json",
+    "gitlint": "eslint $(git ls-files src/) || true",
+    "lint": "eslint src/** || true",
+    "webpack": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gps1784/unrollr.js.git"
+  },
+  "author": "Grant Sparks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gps1784/unrollr.js/issues"
+  },
+  "homepage": "https://github.com/gps1784/unrollr.js#readme",
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-google": "^0.14.0",
+    "webpack": "^5.41.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
